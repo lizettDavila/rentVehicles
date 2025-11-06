@@ -23,7 +23,7 @@
           - name: Install Node.js
             uses: actions/setup-node@v4
             with:
-              node-version: 20 # Or your desired Node.js version
+              node-version: 20.17.0 # Or your desired Node.js version
               cache: 'npm'
           - name: Install dependencies
             run: npm ci
