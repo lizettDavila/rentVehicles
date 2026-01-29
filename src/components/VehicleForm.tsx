@@ -134,7 +134,7 @@ export const VehicleForm: FC<VehicleProps> = ({ drivers, vehicleById }) => {
                 render={({ field }) =>
                     <FormControl>
                         <InputLabel id="select_city" sx={{ color: 'oklch(70.7% 0.022 261.325) !important', fontSize: '14px' }}>City</InputLabel>
-                        <Select {...field} error={!!errors.city} id='select_city' label="City" variant='filled' sx={{ ...styleInput, borderColor: 'white', color: 'white' }} >
+                        <Select {...field} error={!!errors.city} id='select_cities' labelId='select_city' label="City" variant='filled' sx={{ ...styleInput, borderColor: 'white', color: 'white' }} >
                             {cities.map((city) => (
                                 <MenuItem id='city_dropdown' key={city.id} value={city.code}>
                                     {city.name}
