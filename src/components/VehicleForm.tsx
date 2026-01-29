@@ -4,7 +4,7 @@ import { useRouter } from 'next/navigation';
 import { useForm, Controller } from 'react-hook-form';
 import useVehicleMutation from '../hooks/useCreateVehicleMutation';
 import useUpdateVehicleMutation from '../hooks/useUpdateVehicleMutation';
-import { TextField, MenuItem, Button, Typography } from '@mui/material';
+import { TextField, MenuItem } from '@mui/material';
 import { Drivers, Vehicles } from '../interfaces/vehicles';
 import cities from '../resources/cities';
 
@@ -74,7 +74,7 @@ export const VehicleForm: FC<VehicleProps> = ({ drivers, vehicleById }) => {
     return (
 
         <form onSubmit={handleSubmit(onSubmit)} className="flex flex-col gap-4 text-white border-2 px-4.5 py-8 rounded-lg border-gray-800 bg-gray-900 shadow-blue-400/10 shadow-md w-full">
-            <Typography variant="h4" className="text-blue-500 w-full text-center font-bold pb-2"> Add or Edit a Vehicle </Typography>
+            <h4 className="text-emerald-500 text-2xl w-full text-center font-bold pb-2"> Add or Edit a Vehicle </h4>
 
             <Controller
                 name="driver_id"
@@ -149,9 +149,9 @@ export const VehicleForm: FC<VehicleProps> = ({ drivers, vehicleById }) => {
             {errors?.capacity?.type === "required" && (
                 <p role="alert" className='text-sm text-red-500'>Capacity is required.</p>)}
 
-            <div className='flex justify-between gap-3'>
-                <Button variant="contained" disabled={vehicleMutation.isPending} color="primary" type="submit" className=" w-full mt-2">Save </Button>
-                <Button variant="outlined" color="secondary" type="button" className=" w-full mt-2" onClick={() => router.push('/portal')}>Cancel </Button>
+            <div className='flex justify-between gap-3 mt-2'>
+                <button disabled={vehicleMutation.isPending} color="primary" type="submit" className="w-full bg-emerald-500 py-2 px-4 rounded-md text-md font-bold hover:bg-emerald-600 cursor-pointer">Save </button>
+                <button color="secondary" type="button" className=" w-full bg-yellow-500 py-2 px-4 rounded-md text-md font-bold hover:bg-yellow-600 cursor-pointer" onClick={() => router.push('/portal')}>Cancel </button>
             </div>
         </form>
 

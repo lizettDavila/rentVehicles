@@ -10,7 +10,19 @@ export const SkeletonLoading = () => {
                         <Grid key={index
 
                         } size={{ xs: 12, sm: 6, md: 4 }} >
-                            <Skeleton variant="rounded" height={230} sx={{ backgroundColor: 'oklch(37.3% 0.034 259.733)', }} />
+                            <div className="h-auto w-full bg-gray-700/30 rounded-md p-4 flex flex-col gap-4">
+                                <div className="animate-pulse bg-gray-200/30 rounded-md w-44 h-6 mb-4"></div>
+                                <div className="animate-pulse bg-gray-200/30 rounded-md w-24 h-3"></div>
+                                <div className="animate-pulse bg-gray-200/30 rounded-md w-24 h-3"></div>
+                                <div className="animate-pulse bg-gray-200/30 rounded-md w-24 h-3"></div>
+                                <div className="animate-pulse bg-gray-200/30 rounded-md w-24 h-3"></div>
+                                <div className="animate-pulse bg-gray-200/30 rounded-md w-24 h-3"></div>
+                                <div className="animate-pulse bg-gray-200/30 rounded-md w-24 h-3"></div>
+                                <div className="w-full h-auto flex flex-row justify-between gap-x-44 items-center">
+                                    <div className="animate-pulse bg-gray-200/30 rounded-md w-66 flex h-8"></div>
+                                    <div className="animate-pulse bg-gray-200/30 rounded-md w-46 h-8"></div>
+                                </div>
+                            </div>
                         </Grid>
                     ))
                 }
